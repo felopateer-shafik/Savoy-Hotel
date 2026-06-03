@@ -1,0 +1,470 @@
+.cart-section {
+  padding: 5rem 7%;
+  margin-top: 6rem;
+}
+
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.cart-items {
+  flex: 2;
+  min-width: 60%;
+  background: #fff;
+  border-radius: 0.8rem;
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+  overflow: hidden;
+}
+
+.cart-summary {
+  flex: 1;
+  min-width: 30%;
+  background: #fff;
+  border-radius: 0.8rem;
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+  align-self: flex-start;
+  position: sticky;
+  top: 10rem;
+}
+
+/* Cart headers */
+.cart-headers {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1.5fr 1fr 1fr 1.5fr 1fr;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.header-item {
+  text-align: left;
+}
+
+.header-actions {
+  text-align: center;
+}
+
+/* Cart item */
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-bottom: 1px solid #eee;
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.cart-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Item header */
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.item-name {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+/* Item grid for controls */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Item sections */
+.item-section {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Item footer */
+.item-footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f5f5f5;
+  margin-top: auto;
+}
+
+.price-section,
+.total-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.total-section {
+  align-items: flex-end;
+}
+
+/* No longer needed with new layout */
+.item-details {
+  display: none;
+}
+
+/* Image styles removed */
+
+/* Labels for each section */
+.item-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Item content areas */
+.item-quantity,
+.item-rooms,
+.item-dates {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-dates {
+  font-size: 1.4rem;
+  color: #555;
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantity-btn {
+  background: #f5f5f5;
+  border: none;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.quantity-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Availability note below Number of Rooms */
+.availability-note {
+  margin-top: 8px;
+  color: #d9534f; /* Bootstrap danger-like red */
+  font-weight: 800;
+  line-height: 1.3;
+  /* Responsive sizing: small but readable */
+  font-size: 1.2rem;
+}
+
+.availability-note.error {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #856404;
+}
+
+@media (max-width: 768px) {
+  .availability-note {
+    font-size: 1.18rem;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .availability-note {
+    font-size: 1.17rem;
+    margin-top: 4px;
+  }
+}
+
+.item-quantity span {
+  font-size: 1.5rem;
+  min-width: 3rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.nights-count,
+.room-count {
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  min-width: 3rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.item-rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.item-price,
+.item-total {
+  font-size: 1.8rem;
+  color: var(--black);
+  text-align: center;
+  font-weight: 500;
+  background: #f8f9fa;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  min-width: 10rem;
+  margin-top: 0.5rem;
+}
+
+.per-night {
+  font-size: 1.2rem;
+  color: #777;
+  margin-left: 0.2rem;
+  font-weight: 400;
+}
+
+.item-total {
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(var(--primary-rgb), 0.1);
+  font-size: 2rem;
+}
+
+.remove-btn {
+  background: #f8d7da;
+  color: #721c24;
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+/* Cart summary */
+.cart-summary h2 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--black);
+}
+
+.summary-row.total {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.checkout-btn[disabled],
+.checkout-btn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 1rem;
+  text-align: center;
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.clear-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+.continue-shopping {
+  display: block;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.continue-shopping:hover {
+  text-decoration: underline;
+}
+
+.summary-warning {
+  margin-top: 1rem;
+  background: #fff3cd; /* warning background */
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+/* Empty cart */
+.empty-cart {
+  min-height: 60vh;
+}
+
+.empty-cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.empty-cart-container i {
+  font-size: 5rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.empty-cart-container h2 {
+  font-size: 2.8rem;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.empty-cart-container p {
+  font-size: 1.8rem;
+  color: #666;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.empty-cart-container .btn {
+  font-size: 1.8rem;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .cart-section {
+    padding: 5rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+  }
+
+  .cart-items {
+    min-width: 100%;
+  }
+
+  .cart-summary {
+    min-width: 100%;
+  }
+
+  .cart-headers {
+    display: none;
+  }
+
+  .cart-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    position: relative;
+  }
+
+  .item-details {
+    grid-column: 1 / -1;
+  }
+
+  .item-quantity,
+  .item-price,
+  .item-total {
+    justify-self: flex-start;
+  }
+
+  .item-price::before {
+    content: "Price: ";
+    font-weight: bold;
+  }
+
+  .item-total::before {
+    content: "Total: ";
+    font-weight: bold;
+  }
+
+  .remove-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+  }
+}

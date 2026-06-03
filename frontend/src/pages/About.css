@@ -1,0 +1,399 @@
+.about-page {
+  margin-top: 6rem;
+}
+
+.about-hero {
+  height: 50vh;
+  background: #f5f5f5; /* Temporary solid color instead of image */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.hero-content {
+  position: relative;
+  color: var(--primary);
+  z-index: 1;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 2rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-section {
+  padding: 8rem 0;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5rem;
+}
+
+.about-image {
+  flex: 1 1 40%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.about-text {
+  flex: 1 1 40%;
+}
+
+.about-text h2 {
+  font-size: 3.5rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.about-text p {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mission-vision {
+  background: #f9f9f9;
+  padding: 8rem 0;
+}
+
+.mission-vision-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+}
+
+.mission, .vision {
+  flex: 1 1 40%;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  padding: 3rem;
+  min-width: 30rem;
+}
+
+.mission h3, .vision h3 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.mission p, .vision p {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.services-section {
+  padding: 8rem 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 3rem;
+}
+
+.service-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  padding: 3rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-1rem);
+}
+
+.service-icon {
+  width: 8rem;
+  height: 8rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+
+.service-icon i {
+  font-size: 3.5rem;
+}
+
+.service-card h3 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.service-card p {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.team-section {
+  background: #f9f9f9;
+  padding: 8rem 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 3rem;
+}
+
+.team-member {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-1rem);
+}
+
+.member-image {
+  height: 25rem;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.1);
+}
+
+.team-member h3 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  padding: 2rem 2rem 0.5rem;
+}
+
+.team-member .position {
+  font-size: 1.6rem;
+  color: var(--secondary);
+  padding: 0 2rem 1rem;
+  font-style: italic;
+}
+
+.team-member p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 0 2rem 2rem;
+  line-height: 1.6;
+}
+
+.cta-section {
+  padding: 8rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #3a3a3a; /* Temporary background instead of image */
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 70rem;
+  margin: 0 auto;
+  color: white;
+}
+
+.cta-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.cta-content .btn {
+  padding: 1.5rem 4rem;
+  font-size: 1.8rem;
+}
+
+.address-section {
+  padding: 8rem 0;
+}
+
+.address-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.address-info {
+  flex: 1 1 30%;
+  min-width: 30rem;
+}
+
+.address-info h3 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.address-info h3:first-child {
+  margin-top: 0;
+}
+
+.address-info p {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.address-info i {
+  color: var(--primary);
+  margin-right: 1rem;
+}
+
+.map-container {
+  flex: 1 1 60%;
+  min-height: 45rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 991px) {
+  .about-hero {
+    height: 40vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.8rem;
+  }
+  
+  .about-section,
+  .mission-vision,
+  .services-section,
+  .team-section,
+  .cta-section,
+  .address-section {
+    padding: 6rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 30vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.6rem;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .about-image, .about-text {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  
+  .about-text h2 {
+    font-size: 3rem;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .services-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .address-content {
+    flex-direction: column;
+  }
+  
+  .address-info, .map-container {
+    flex: 1 1 100%;
+  }
+  
+  .map-container {
+    min-height: 30rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    height: 25vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.4rem;
+  }
+}

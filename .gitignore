@@ -1,0 +1,13 @@
+# Node dependencies
+**/node_modules/
+
+# Production build folders
+frontend/build/
+backend/build/
+
+# Environment variables
+*.env
+
+# OS and IDE specific
+.DS_Store
+*.log

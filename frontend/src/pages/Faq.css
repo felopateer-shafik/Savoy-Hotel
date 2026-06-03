@@ -1,0 +1,164 @@
+.faq-section {
+  padding: 5rem 7%;
+  margin-top: 6rem;
+}
+
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  align-items: flex-start;
+}
+
+.faq-image {
+  flex: 1 1 30%;
+  min-width: 30rem;
+}
+
+.faq-image img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.faq-content {
+  flex: 1 1 60%;
+}
+
+.accordion {
+  margin-bottom: 4rem;
+}
+
+.accordion-item {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.accordion-item.active .accordion-header {
+  background: var(--primary);
+  color: #fff;
+}
+
+.accordion-header h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.accordion-icon {
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-body.active {
+  max-height: 500px;
+}
+
+.accordion-body p {
+  padding: 2rem;
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.8;
+  border-top: 1px solid #eee;
+}
+
+.contact-info {
+  background: #f9f9f9;
+  padding: 3rem;
+  border-radius: 0.5rem;
+}
+
+.contact-info h3 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  font-size: 1.6rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-method i {
+  font-size: 2rem;
+  color: var(--primary);
+  width: 4rem;
+  height: 4rem;
+  background: rgba(0, 119, 182, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-method p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.contact-method a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+  color: var(--secondary);
+}
+
+@media (max-width: 991px) {
+  .faq-section {
+    padding: 5rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .faq-image, .faq-content {
+    flex: 1 1 100%;
+  }
+  
+  .accordion-header h3 {
+    font-size: 1.6rem;
+  }
+  
+  .contact-methods {
+    flex-direction: column;
+  }
+}

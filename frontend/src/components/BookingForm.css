@@ -1,0 +1,382 @@
+.booking-form-container {
+  padding: 3rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* Auto-scroll content rather than truncating */
+}
+
+.booking-form-container h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 2rem;
+  flex-grow: 1;
+  justify-content: space-between; /* Even content distribution as per preference */
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.select-input,
+.date-input {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.check-availability {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.check-btn {
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.check-btn:hover {
+  background-color: var(--primary);
+  transform: translateY(-5px); /* Subtle lift on hover as per preference */
+}
+
+.book-btn {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  align-self: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.book-btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-5px); /* Subtle lift on hover as per preference */
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.room-selection {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.room-details {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.room-details h3 {
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.availability {
+  font-size: 1.6rem;
+  color: var(--secondary);
+}
+
+.no-availability {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+.no-availability p {
+  font-size: 1.8rem;
+  color: #c62828;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Positioning navigation buttons at 2% from edge as per preference */
+.nav-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.nav-prev {
+  left: 2%;
+}
+
+.nav-next {
+  right: 2%;
+}
+
+/* Custom styling for DatePicker */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .booking-form-container {
+    height: auto;
+    min-height: 600px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cart Added Modal Styles */
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cart-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.cart-modal-icon {
+  margin-bottom: 1rem;
+}
+
+.cart-modal-icon i {
+  font-size: 5rem;
+  color: var(--primary);
+  animation: scaleIn 0.5s ease 0.2s both;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.cart-modal h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.cart-modal-details {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cart-modal-details .room-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.cart-modal-details .booking-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cart-modal-details .booking-info span {
+  font-size: 1.4rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.cart-modal-details .booking-info span i {
+  color: var(--primary);
+  width: 20px;
+}
+
+.cart-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart-modal-actions .btn-continue {
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.cart-modal-actions .btn-continue:hover {
+  background: rgba(0, 119, 182, 0.1);
+}
+
+.cart-modal-actions .btn-view-cart {
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-weight: 500;
+}
+
+.cart-modal-actions .btn-view-cart:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 119, 182, 0.4);
+}
+
+@media (max-width: 480px) {
+  .cart-modal {
+    padding: 2rem;
+  }
+
+  .cart-modal h2 {
+    font-size: 1.8rem;
+  }
+
+  .cart-modal-icon i {
+    font-size: 4rem;
+  }
+
+  .cart-modal-details .room-name {
+    font-size: 1.6rem;
+  }
+
+  .cart-modal-actions .btn-continue,
+  .cart-modal-actions .btn-view-cart {
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+  }
+}
